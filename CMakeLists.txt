@@ -517,13 +517,15 @@ add_executable(playground
 	playground/playground.cpp
 	common/shader.cpp
 	common/shader.hpp
+    shaders/VertexShader.vsh
+    shaders/FragmentShader.fsh
 )
 target_link_libraries(playground
 	${ALL_LIBS}
 )
 # Xcode and Visual working directories
 set_target_properties(playground PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/playground/")
-create_target_launcher(playground WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/playground/")
+create_target_launcher(playground WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/playgfround/")
 
 
 
@@ -660,7 +662,7 @@ create_target_launcher(tutorial18_particles WORKING_DIRECTORY "${CMAKE_CURRENT_S
 
 
 SOURCE_GROUP(common REGULAR_EXPRESSION ".*/common/.*" )
-SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/.*shader$" )
+SOURCE_GROUP(shaders REGULAR_EXPRESSION ".*/shaders/.*" )
 
 
 if (NOT ${CMAKE_GENERATOR} MATCHES "Xcode" )
