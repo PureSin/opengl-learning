@@ -513,12 +513,14 @@ set_target_properties(tutorial17_rotations PROPERTIES XCODE_ATTRIBUTE_CONFIGURAT
 create_target_launcher(tutorial17_rotations WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/tutorial17_rotations/")
 
 # User playground
-add_executable(playground 
+add_executable(playground
+    common/texture.cpp
+    common/texture.hpp
 	playground/playground.cpp
 	common/shader.cpp
 	common/shader.hpp
-    shaders/VertexShader.vsh
-    shaders/FragmentShader.fsh
+    playground/VertexShader.vsh
+    playground/FragmentShader.fsh
 )
 target_link_libraries(playground
 	${ALL_LIBS}
