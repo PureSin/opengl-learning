@@ -519,6 +519,8 @@ add_executable(playground
 	playground/playground.cpp
 	common/shader.cpp
 	common/shader.hpp
+    common/controls.cpp
+    common/controls.hpp
     playground/VertexShader.vsh
     playground/FragmentShader.fsh
 )
