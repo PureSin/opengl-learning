@@ -523,6 +523,8 @@ add_executable(playground
     common/controls.hpp
     playground/VertexShader.vsh
     playground/FragmentShader.fsh
+    common/objloader.cpp
+    common/objloader.hpp
 )
 target_link_libraries(playground
 	${ALL_LIBS}
